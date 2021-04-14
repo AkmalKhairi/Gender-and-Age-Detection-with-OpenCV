@@ -53,11 +53,6 @@ Let’s try this gender and age classifier out on some of our own images now.
 
 We’ll get to the command prompt, run our script with the image option and specify an image to classify:
 
-Python Project Example 1 as shown in Figure 2:
-
-![Figure 2](https://www.pyimagesearch.com/wp-content/uploads/2020/04/face_mask_detection_phases.png)
-Figure 2: Phases and individual steps for building a COVID-19 face mask detector with computer vision and deep learning 
-
 In order to train a custom face mask detector, we need to break our project into two distinct phases, each with its own respective sub-steps (as shown by Figure 1 above):
 
 - Training: Here we’ll focus on loading our face mask detection dataset from disk, training a model (using Keras/TensorFlow) on this dataset, and then serializing the face mask detector to disk
@@ -66,10 +61,7 @@ In order to train a custom face mask detector, we need to break our project into
 
 We’ll review each of these phases and associated subsets in detail in the remainder of this tutorial, but in the meantime, let’s take a look at the dataset we’ll be using to train our COVID-19 face mask detector.
 
-
 Our COVID-19 face mask detection dataset as shown in Figure 3:
-
-![Figure 3](https://www.pyimagesearch.com/wp-content/uploads/2020/04/face_mask_detection_dataset.jpg)
 
 Figure 3: A face mask detection dataset consists of “with mask” and “without mask” images. 
 
