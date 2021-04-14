@@ -10,78 +10,113 @@
 **Team Members:** 
 - [MUHAMMAD AKMAL BIN MOHD SABRI]
 - [WAN MUHAMMAD ISMAT BIN WAN AZMY]
+- [MUHAMMAD AKMAL KHAIRI BIN ABDUL HALIM]
+- [MUHAMMAD IMRAN BIN ISMAIL
 
-
-
-- [ ] **Objectives:**
+**Objectives:**
 - To build a gender and age detector that can approximately guess the gender and age of the person (face) in a picture using Deep Learning on the Adience dataset.
 
 ##  B. ABSTRACT 
 
-In this Python Project, we will use Deep Learning to accurately identify the gender and 
+In this Python Project, we will use Deep Learning to accurately identify the gender and age of a person from a single image of a face. We will use the models trained by Tal Hassner and Gil Levi. The predicted gender may be one of ‘Male’ and ‘Female’, and the predicted age may be one of the following ranges- (0 – 2), (4 – 6), (8 – 12), (15 – 20), (25 – 32), (38 – 43), (48 – 53), (60 – 100) (8 nodes in the final softmax layer). It is very difficult to accurately guess an exact age from a single image because of factors like makeup, lighting, obstructions, and facial expressions. And so, we make this a classification problem instead of making it one of regression.
 
-age of a person from a single image of a face. We will use the models trained by Tal Hassner and Gil Levi. 
+![python-project-example-output-1](https://user-images.githubusercontent.com/58213194/114746369-3f67ab00-9d82-11eb-8f39-0730d750ef30.png)
 
-The predicted gender may be one of ‘Male’ and ‘Female’, and the predicted age may be one of the following ranges- (0 – 2), (4 – 6), (8 – 12), (15 – 20), (25 – 32), (38 – 43), (48 – 53), (60 – 100) (8 nodes in the final softmax layer). 
-
-It is very difficult to accurately guess an exact age from a single image because of factors like makeup, lighting, obstructions, and facial expressions. 
-
-And so, we make this a classification problem instead of making it one of regression.
-
-
-![Coding](https://miro.medium.com/max/1400/1*fyfSOSKswsmV0n7Wdy6R4Q.jpeg)
-Figure 1 shows the AI output of detecting which user is not wearing a face mask or inappropriate face mask.
-
+**Figure 1**: AI output of detecting the user's gender & age.
 
 ## C.  DATASET
 
-For this python project, we’ll use the Adience dataset; the dataset is available in the public domain and you can find it here. 
+For this python project, we’ll use the Adience dataset; the dataset is available in the public domain and you can find it here. This dataset serves as a benchmark for face photos and is inclusive of various real-world imaging conditions like noise, lighting, pose, and appearance. The images have been collected from Flickr albums and distributed under the Creative Commons (CC) license. It has a total of 26,580 photos of 2,284 subjects in eight age ranges (as mentioned above) and is about 1GB in size. The models we will use have been trained on this dataset.
 
-This dataset serves as a benchmark for face photos and is inclusive of various real-world imaging conditions like noise, lighting, pose, and appearance. 
-
-The images have been collected from Flickr albums and distributed under the Creative Commons (CC) license. 
-
-It has a total of 26,580 photos of 2,284 subjects in eight age ranges (as mentioned above) and is about 1GB in size. 
-
-The models we will use have been trained on this dataset.
-
-- Detect gender either ‘Male’ and ‘Female’ in images
-- Detect age in images
-- Detect gende & age in real-time video streams
+- Detect human's gender either ‘Male’ and ‘Female’ in images
+- Detect human's age in images
+- Detect human's gender & age in real-time video streams
 
 Let’s try this gender and age classifier out on some of our own images now.
 
 We’ll get to the command prompt, run our script with the image option and specify an image to classify:
 
-In order to train a custom face mask detector, we need to break our project into two distinct phases, each with its own respective sub-steps (as shown by Figure 1 above):
+**Example 1**
 
-- Training: Here we’ll focus on loading our face mask detection dataset from disk, training a model (using Keras/TensorFlow) on this dataset, and then serializing the face mask detector to disk
+![interesting-python-project-example](https://user-images.githubusercontent.com/58213194/114747254-388d6800-9d83-11eb-9748-dfaeb2f416d1.png)
 
-- Deployment: Once the face mask detector is trained, we can then move on to loading the mask detector, performing face detection, and then classifying each face as with_mask or without_mask
+**Figure 2**: Example python command to execute & evaluate the image from the dataset.
 
-We’ll review each of these phases and associated subsets in detail in the remainder of this tutorial, but in the meantime, let’s take a look at the dataset we’ll be using to train our COVID-19 face mask detector.
+**Output:**
 
-Our COVID-19 face mask detection dataset as shown in Figure 3:
+![python-project-example-output-1](https://user-images.githubusercontent.com/58213194/114747518-80ac8a80-9d83-11eb-9402-5a7699d5d153.png)
 
-Figure 3: A face mask detection dataset consists of “with mask” and “without mask” images. 
+**Figure 3**: Program output after evaluating the image provided into the command.
 
-The dataset we’ll be using here today was created by PyImageSearch reader Prajna Bhandary.
+***
 
-This dataset consists of 1,376 images belonging to two classes:
+**Example 2**
 
-- with_mask: 690 images
-- without_mask: 686 images
+![2](https://user-images.githubusercontent.com/58213194/114747675-ac2f7500-9d83-11eb-9b6a-641f3e778a93.png)
 
-Our goal is to train a custom deep learning model to detect whether a person is or is not wearing a mask.
+**Figure 4**: Example python command to execute & evaluate the second image from the dataset.
 
-How was our face mask dataset created?
-Prajna, like me, has been feeling down and depressed about the state of the world — thousands of people are dying each day, and for many of us, there is very little (if anything) we can do.
+**Output:**
 
-To help keep her spirits up, Prajna decided to distract herself by applying computer vision and deep learning to solve a real-world problem:
+![22](https://user-images.githubusercontent.com/58213194/114747704-b3568300-9d83-11eb-991e-6f5326d95b21.png)
 
-- Best case scenario — she could use her project to help others
-- Worst case scenario — it gave her a much needed mental escape
+**Figure 5**: Program output after evaluating the second image provided into the command.
 
+***
+
+**Example 3**
+
+![3](https://user-images.githubusercontent.com/58213194/114747910-ea2c9900-9d83-11eb-8cfa-b8b98aa0f5b8.png)
+
+**Figure 6**: Example python command to execute & evaluate the third image from the dataset.
+
+**Output:**
+
+![33](https://user-images.githubusercontent.com/58213194/114747968-fa447880-9d83-11eb-8552-8b296cd14b69.png)
+
+**Figure 7**: Program output after evaluating the third image provided into the command.
+
+***
+
+**Example 4**
+
+![4](https://user-images.githubusercontent.com/58213194/114748191-3d065080-9d84-11eb-8c20-4d1287070689.png)
+
+**Figure 8**: Example python command to execute & evaluate the fourth image from the dataset.
+
+**Output:**
+
+![44](https://user-images.githubusercontent.com/58213194/114748224-45f72200-9d84-11eb-8386-69d3a754cf40.png)
+
+**Figure 9**: Program output after evaluating the fourth image provided into the command.
+
+***
+
+**Example 5**
+
+![5](https://user-images.githubusercontent.com/58213194/114748285-57d8c500-9d84-11eb-960a-c0b67a25f9fc.png)
+
+**Figure 10**: Example python command to execute & evaluate the fifth image from the dataset.
+
+**Output:**
+
+![55](https://user-images.githubusercontent.com/58213194/114748307-5dcea600-9d84-11eb-98d0-b6a04b6a571b.png)
+
+**Figure 11**: Program output after evaluating the fifth image provided into the command.
+
+***
+
+**Example 6**
+
+![6](https://user-images.githubusercontent.com/58213194/114748359-6cb55880-9d84-11eb-8356-51be189eb69b.png)
+
+**Figure 12**: Example python command to execute & evaluate the sixth image from the dataset.
+
+**Output:**
+
+![66](https://user-images.githubusercontent.com/58213194/114748392-76d75700-9d84-11eb-8f67-d76539b2933e.png)
+
+**Figure 13**: Program output after evaluating the sixth image provided into the command.
 
 ## D.   PROJECT STRUCTURE
 
