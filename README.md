@@ -184,33 +184,18 @@ We are now ready to train our face mask detector using Keras, TensorFlow, and De
 
 From there, open up a terminal, and execute the following command:
 
-- $ python train_mask_detector.py --dataset dataset
-- [INFO] loading images...
-- [INFO] compiling model...
-- [INFO] training head...
-- Train for 34 steps, validate on 276 samples
-- Epoch 1/20
-- 34/34 [==============================] - 30s 885ms/step - loss: 0.6431 - accuracy: 0.6676 - val_loss: 0.3696 - val_accuracy: 0.8242
-- Epoch 2/20
-- 34/34 [==============================] - 29s 853ms/step - loss: 0.3507 - accuracy: 0.8567 - val_loss: 0.1964 - val_accuracy: 0.9375
-- Epoch 3/20
-- 34/34 [==============================] - 27s 800ms/step - loss: 0.2792 - accuracy: 0.8820 - val_loss: 0.1383 - val_accuracy: 0.9531
-- Epoch 4/20
-- 34/34 [==============================] - 28s 814ms/step - loss: 0.2196 - accuracy: 0.9148 - val_loss: 0.1306 - val_accuracy: 0.9492
-- Epoch 5/20
-- 34/34 [==============================] - 27s 792ms/step - loss: 0.2006 - accuracy: 0.9213 - val_loss: 0.0863 - val_accuracy: 0.9688
-- ...
-- Epoch 16/20
-- 34/34 [==============================] - 27s 801ms/step - loss: 0.0767 - accuracy: 0.9766 - val_loss: 0.0291 - val_accuracy: 0.9922
-- Epoch 17/20
-- 34/34 [==============================] - 27s 795ms/step - loss: 0.1042 - accuracy: 0.9616 - val_loss: 0.0243 - val_accuracy: 1.0000
-- Epoch 18/20
-- 34/34 [==============================] - 27s 796ms/step - loss: 0.0804 - accuracy: 0.9672 - val_loss: 0.0244 - val_accuracy: 0.9961
-- Epoch 19/20
-- 34/34 [==============================] - 27s 793ms/step - loss: 0.0836 - accuracy: 0.9710 - val_loss: 0.0440 - val_accuracy: 0.9883
-- Epoch 20/20
-- 34/34 [==============================] - 28s 838ms/step - loss: 0.0717 - accuracy: 0.9710 - val_loss: 0.0270 - val_accuracy: 0.9922
-- [INFO] evaluating network...
+- $ python gad.py --image girl1.jpg
+- Gender: Female
+- Age: 25-32 years
+- 
+- $ python gad.py --image man1.jpg
+- Gender: Male
+- Age: 60-100 years
+- 
+- $ python gad.py --image kid1.jpg
+- Gender: Male
+- Age: 4-6 years
+
 
 |      |    precision    | recall| f1-score | support |
 |------|-----------------|-------|----------|---------|
@@ -239,7 +224,8 @@ Detecting Age & Gender with OpenCV in real-time
 You can then launch the mask detector in real-time video streams using the following command:
 - $ python gad.py
 
-[![Figure5](https://img.youtube.com/vi/wYwW7gAYyxw/0.jpg)](https://www.youtube.com/watch?v=wYwW7gAYyxw "Figure5")
+![Capture](https://user-images.githubusercontent.com/73923156/114885569-5ae1bd00-9e39-11eb-9b26-8338096ac69c.JPG)
+
 
 Figure 5: Age & Gender Detection in real-time video streams
 
