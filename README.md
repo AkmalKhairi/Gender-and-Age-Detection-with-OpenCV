@@ -148,38 +148,34 @@ We’ll get to the command prompt, run our script with the image option and spec
 ## D.   PROJECT STRUCTURE
 
 The following directory is our structure of our project:
-- $ tree --dirsfirst --filelimit 10
+- $ tree --dirsfirst --filelimit 14
 - .
-- ├── dataset
-- │   ├── with_mask [690 entries]
-- │   └── without_mask [686 entries]
-- ├── examples
-- │   ├── example_01.png
-- │   ├── example_02.png
-- │   └── example_03.png
-- ├── face_detector
-- │   ├── deploy.prototxt
-- │   └── res10_300x300_ssd_iter_140000.caffemodel
-- ├── detect_mask_image.py
-- ├── detect_mask_video.py
-- ├── mask_detector.model
-- ├── plot.png
-- └── train_mask_detector.py
-- 5 directories, 10 files
+- ├── age_deploy.protxt
+- ├── age_net.caffeemodel
+- ├── gad.py
+- ├── age_deploy.protxt
+- ├── age_net.caffeemodel
+- ├── girl1.jpg
+- ├── girl2.jpg
+- ├── kid1.jpg
+- ├── man1.jpg
+- ├── minion.jpg
+- ├── opencv_face_detector.pbtxt
+- ├── opencv_face_detector.uint8.pb
+- ├── woman1.jpg
+- ├── woman2.jpg
+- 14 files
 
 
-The dataset/ directory contains the data described in the “Our COVID-19 face mask detection dataset” section.
+The dataset/ directory contains the data described in the “Gender and Age Detection” section.
 
-Three image examples/ are provided so that you can test the static image face mask detector.
+Eight image examples/ are provided so that you can test the static image gender and age detector.
 
-We’ll be reviewing three Python scripts in this tutorial:
+We’ll be reviewing a Python scripts in this tutorial:
 
-- train_mask_detector.py: Accepts our input dataset and fine-tunes MobileNetV2 upon it to create our mask_detector.model. A training history plot.png containing accuracy/loss curves is also produced
-- detect_mask_image.py: Performs face mask detection in static images
-- detect_mask_video.py: Using your webcam, this script applies face mask detection to every frame in the stream
+- detect_mask_image.py: Performs gender and age detection in static images & using your webcam, this script applies Age & Gender detection to every frame in the stream
 
-In the next two sections, we will train our face mask detector.
-
+In the next two sections, we will train our Age & Gender detector.
 
 
 ## E   TRAINING THE COVID-19 FACE MASK DETECTION
@@ -238,19 +234,16 @@ Given these results, we are hopeful that our model will generalize well to image
 
 ## F.  RESULT AND CONCLUSION
 
-Detecting COVID-19 face masks with OpenCV in real-time
+Detecting Age & Gender with OpenCV in real-time
 
 You can then launch the mask detector in real-time video streams using the following command:
-- $ python detect_mask_video.py
-- [INFO] loading face detector model...
-- INFO] loading face mask detector model...
-- [INFO] starting video stream...
+- $ python gad.py
 
 [![Figure5](https://img.youtube.com/vi/wYwW7gAYyxw/0.jpg)](https://www.youtube.com/watch?v=wYwW7gAYyxw "Figure5")
 
-Figure 5: Mask detector in real-time video streams
+Figure 5: Age & Gender Detection in real-time video streams
 
-In Figure 5, you can see that our face mask detector is capable of running in real-time (and is correct in its predictions as well.
+In Figure 5, you can see that our Age & Gender detector is capable of running in real-time (and is correct in its predictions as well.
 
 
 
