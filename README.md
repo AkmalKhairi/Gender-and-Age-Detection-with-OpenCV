@@ -178,7 +178,7 @@ We’ll be reviewing a Python scripts in this tutorial:
 In the next two sections, we will train our Age & Gender detector.
 
 
-## E   TRAINING THE COVID-19 FACE MASK DETECTION
+## E   TRAINING THE AGE & GENDER DETECTION
 
 We are now ready to train our face mask detector using Keras, TensorFlow, and Deep Learning.
 
@@ -196,23 +196,24 @@ From there, open up a terminal, and execute the following command:
 - Gender: Male
 - Age: 4-6 years
 
-
-|      |    precision    | recall| f1-score | support |
-|------|-----------------|-------|----------|---------|
-|with_mask|0.99|1.00|0.99|138|
-|without_mask|1.00|0.99|0.99|138|
-|accuracy| | |0.99|276|
-|macro avg|0.99|0.99|0.99|276|
-|weighted avg|0.99|0.99|0.99|276|
+<img width="800" alt="opencv_age_detection_confusion_matrix" src="https://user-images.githubusercontent.com/73923156/114961386-7b426380-9e9b-11eb-9994-2531d74e8633.png">
 
 
-![Figure 4](https://www.pyimagesearch.com/wp-content/uploads/2020/04/face_mask_detector_plot.png)
+**Figure 4: Age & Gender detector confusion matrix
 
-Figure 4: Figure 10: COVID-19 face mask detector training accuracy/loss curves demonstrate high accuracy and little signs of overfitting on the data
+As you can see, one of the biggest issues with the age prediction model is that it’s heavily biased toward the age group 25-32.
 
-As you can see, we are obtaining ~99% accuracy on our test set.
+Looking at Figure 4, we can see that our model may predict the 25-32 age group when in fact the actual age belongs to a different age bracket.
 
-Looking at Figure 4, we can see there are little signs of overfitting, with the validation loss lower than the training loss. 
+**You can combat this bias by:**
+
+- Gathering additional training data for the other age groups to help balance out the dataset
+
+- Applying class weighting to handle class imbalance
+
+- Being more aggressive with data augmentation
+
+- Implementing additional regularization when training the model
 
 Given these results, we are hopeful that our model will generalize well to images outside our training and testing set.
 
@@ -227,7 +228,7 @@ You can then launch the mask detector in real-time video streams using the follo
 ![Capture](https://user-images.githubusercontent.com/73923156/114885569-5ae1bd00-9e39-11eb-9b26-8338096ac69c.JPG)
 
 
-Figure 5: Age & Gender Detection in real-time video streams
+**Figure 5: Age & Gender Detection in real-time video streams
 
 In Figure 5, you can see that our Age & Gender detector is capable of running in real-time (and is correct in its predictions as well.
 
