@@ -199,11 +199,11 @@ From there, open up a terminal, and execute the following command:
 <img width="800" alt="opencv_age_detection_confusion_matrix" src="https://user-images.githubusercontent.com/73923156/114961386-7b426380-9e9b-11eb-9994-2531d74e8633.png">
 
 
-**Figure 4: Age & Gender detector confusion matrix
+**Figure 14:** Age & Gender detector confusion matrix
 
 As you can see, one of the biggest issues with the age prediction model is that it’s heavily biased toward the age group 25-32.
 
-Looking at Figure 4, we can see that our model may predict the 25-32 age group when in fact the actual age belongs to a different age bracket.
+Looking at Figure 14, we can see that our model may predict the 25-32 age group when in fact the actual age belongs to a different age bracket.
 
 **You can combat this bias by:**
 
@@ -228,9 +228,9 @@ You can then launch the mask detector in real-time video streams using the follo
 ![Capture](https://user-images.githubusercontent.com/73923156/114885569-5ae1bd00-9e39-11eb-9b26-8338096ac69c.JPG)
 
 
-**Figure 5: Age & Gender Detection in real-time video streams
+**Figure 15:** Age & Gender Detection in real-time video streams
 
-In Figure 5, you can see that our Age & Gender detector is capable of running in real-time (and is correct in its predictions as well.
+In Figure 15, you can see that our Age & Gender detector is capable of running in real-time (and is correct in its predictions as well.
 
 
 
