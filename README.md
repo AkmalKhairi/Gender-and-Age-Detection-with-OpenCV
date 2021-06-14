@@ -343,4 +343,6 @@ OpenCV is short for Open Source Computer Vision. Intuitively by the name, it is 
 
 A Convolutional Neural Network is a deep neural network (DNN) widely used for the purposes of image recognition and processing and NLP. Also known as a ConvNet, a CNN has input and output layers, and multiple hidden layers, many of which are convolutional. In a way, CNNs are regularized multilayer perceptrons.
 
-[youtube video link here]
+https://www.youtube.com/watch?v=x-UmU5zGxXk&ab_channel=AkmalKhairi
+
+
