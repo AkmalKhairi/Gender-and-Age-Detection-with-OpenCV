@@ -101,6 +101,45 @@ The dataset/ directory contains the data described in the “Gender and Age Dete
 
 ## E.   TRAINING THE AGE & GENDER DETECTION
 
+* opencv_face_detector.pbtxt
+* opencv_face_detector_uint8.pb
+* age_deploy.prototxt
+* age_net.caffemodel
+* gender_deploy.prototxt
+* gender_net.caffemodel
+* a few pictures to try the project on
+
+For face detection, we have a .pb file- this is a protobuf file (protocol buffer); it holds the graph definition and the trained weights of the model. We can use this to run the trained model. And while a .pb file holds the protobuf in binary format, one with the .pbtxt extension holds it in text format. These are TensorFlow files. For age and gender, the .prototxt files describe the network configuration and the .caffemodel file defines the internal states of the parameters of the layers.
+
+1. We use the argparse library to create an argument parser so we can get the image argument from the command prompt. We make it parse the argument holding the path to the image to classify gender and age for.
+
+2. For face, age, and gender, initialize protocol buffer and model.
+
+3. Initialize the mean values for the model and the lists of age ranges and genders to classify from.
+
+4. Now, use the readNet() method to load the networks. The first parameter holds trained weights and the second carries network configuration.
+
+5. Let’s capture video stream in case you’d like to classify on a webcam’s stream. Set padding to 20.
+
+6. Now until any key is pressed, we read the stream and store the content into the names hasFrame and frame. If it isn’t a video, it must wait, and so we call up waitKey() from cv2, then break.
+
+7. Let’s make a call to the highlightFace() function with the faceNet and frame parameters, and what this returns, we will store in the names resultImg and faceBoxes. And if we got 0 faceBoxes, it means there was no face to detect.
+Here, net is faceNet- this model is the DNN Face Detector and holds only about 2.7MB on disk.
+
+Create a shallow copy of frame and get its height and width.
+Create a blob from the shallow copy.
+Set the input and make a forward pass to the network.
+faceBoxes is an empty list now. for each value in 0 to 127, define the confidence (between 0 and 1). Wherever we find the confidence greater than the confidence threshold, which is 0.7, we get the x1, y1, x2, and y2 coordinates and append a list of those to faceBoxes.
+Then, we put up rectangles on the image for each such list of coordinates and return two things: the shallow copy and the list of faceBoxes.
+
+8. But if there are indeed faceBoxes, for each of those, we define the face, create a 4-dimensional blob from the image. In doing this, we scale it, resize it, and pass in the mean values.
+
+9. We feed the input and give the network a forward pass to get the confidence of the two class. Whichever is higher, that is the gender of the person in the picture.
+
+10. Then, we do the same thing for age.
+
+11. We’ll add the gender and age texts to the resulting image and display it with imshow().
+
 Let’s try this gender and age classifier out on some of our own images now.
 
 We’ll get to the command prompt, run our script with the image option and specify an image to classify:
@@ -124,7 +163,10 @@ The system cannot find the path specified.
 
 **Example 2**
 
-![2](https://user-images.githubusercontent.com/58213194/114747675-ac2f7500-9d83-11eb-9b6a-641f3e778a93.png)
+```
+C:\Users\ismatazmy-PC>cd dir
+The system cannot find the path specified.
+```
 
 **Figure 4:** Example python command to execute & evaluate the second image from the dataset.
 
@@ -138,7 +180,10 @@ The system cannot find the path specified.
 
 **Example 3**
 
-![3](https://user-images.githubusercontent.com/58213194/114747910-ea2c9900-9d83-11eb-8cfa-b8b98aa0f5b8.png)
+```
+C:\Users\ismatazmy-PC>cd dir
+The system cannot find the path specified.
+```
 
 **Figure 6:** Example python command to execute & evaluate the third image from the dataset.
 
@@ -148,11 +193,12 @@ The system cannot find the path specified.
 
 **Figure 7:** Program output after evaluating the third image provided into the command.
 
-***
-
 **Example 4**
 
-![4](https://user-images.githubusercontent.com/58213194/114748191-3d065080-9d84-11eb-8c20-4d1287070689.png)
+```
+C:\Users\ismatazmy-PC>cd dir
+The system cannot find the path specified.
+```
 
 **Figure 8:** Example python command to execute & evaluate the fourth image from the dataset.
 
@@ -162,11 +208,12 @@ The system cannot find the path specified.
 
 **Figure 9:** Program output after evaluating the fourth image provided into the command.
 
-***
-
 **Example 5**
 
-![5](https://user-images.githubusercontent.com/58213194/114748285-57d8c500-9d84-11eb-960a-c0b67a25f9fc.png)
+```
+C:\Users\ismatazmy-PC>cd dir
+The system cannot find the path specified.
+```
 
 **Figure 10:** Example python command to execute & evaluate the fifth image from the dataset.
 
@@ -180,7 +227,10 @@ The system cannot find the path specified.
 
 **Example 6**
 
-![6](https://user-images.githubusercontent.com/58213194/114748359-6cb55880-9d84-11eb-8356-51be189eb69b.png)
+```
+C:\Users\ismatazmy-PC>cd dir
+The system cannot find the path specified.
+```
 
 **Figure 12:** Example python command to execute & evaluate the sixth image from the dataset.
 
