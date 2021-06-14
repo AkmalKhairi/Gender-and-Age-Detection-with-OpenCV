@@ -1,6 +1,6 @@
 # GENDER AND AGE DETECTION USING DEEP LEARNING 
 
-# A. PROJECT SUMMARY
+## A. PROJECT SUMMARY
 
 **Project Title:** Gender and Age Detection
 
@@ -15,13 +15,13 @@
 **Objectives:**
 - To build a gender and age detector that can approximately guess the gender and age of the person (face) in a picture using Deep Learning on the Adience dataset.
 
-# Acknowledgements
+## ACKNOWLEDGEMENTS
 
 Our group makes use of the following open source projects:
 
  - [data-flair.training](https://data-flair.training/blogs/python-project-gender-age-detection/)
 
-# B. ABSTRACT 
+## B. ABSTRACT 
 
 In this Python Project, we will use Deep Learning to accurately identify the gender and age of a person from a single image of a face. We will use the models trained by Tal Hassner and Gil Levi. The predicted gender may be one of ‘Male’ and ‘Female’, and the predicted age may be one of the following ranges- (0 – 2), (4 – 6), (8 – 12), (15 – 20), (25 – 32), (38 – 43), (48 – 53), (60 – 100) (8 nodes in the final softmax layer). It is very difficult to accurately guess an exact age from a single image because of factors like makeup, lighting, obstructions, and facial expressions. And so, we make this a classification problem instead of making it one of regression.
 
@@ -41,11 +41,15 @@ To go about the python project, we’ll:
 - Classify into one of the 8 age ranges
 - Put the results on the image and display it
 
-![python-project-example-output-1](https://user-images.githubusercontent.com/58213194/114746369-3f67ab00-9d82-11eb-8f39-0730d750ef30.png)
+<p align="center">
+  <img width="400" src="https://user-images.githubusercontent.com/58213194/114746369-3f67ab00-9d82-11eb-8f39-0730d750ef30.png" alt="Material Bread logo">
+</p>
 
-**Figure 1:** AI output of detecting the user's gender & age.
+<p align="center">
+Figure 1: AI output of detecting the user's gender & age.
+</p>
 
-# C.  DATASET
+## C.  DATASET
 
 For this python project, we’ll use the Adience dataset; the dataset is available in the public domain and you can find it here. This dataset serves as a benchmark for face photos and is inclusive of various real-world imaging conditions like noise, lighting, pose, and appearance. The images have been collected from Flickr albums and distributed under the Creative Commons (CC) license. It has a total of 26,580 photos of 2,284 subjects in eight age ranges (as mentioned above) and is about 1GB in size. The models we will use have been trained on this dataset.
 
@@ -151,7 +155,7 @@ We’ll get to the command prompt, run our script with the image option and spec
 
 **Figure 13:** Program output after evaluating the sixth image provided into the command.
 
-# D.   PROJECT STRUCTURE
+## D.   PROJECT STRUCTURE
 
 The following directory is our structure of our project:
 - $ tree --dirsfirst --filelimit 14
@@ -184,32 +188,23 @@ We’ll be reviewing a Python scripts in this tutorial:
 In the next two sections, we will train our Age & Gender detector.
 
 
-# E.   TRAINING THE AGE & GENDER DETECTION
+## E.   TRAINING THE AGE & GENDER DETECTION
+<p align="center">
+     <img width="800" alt="opencv_age_detection_confusion_matrix" src="https://user-images.githubusercontent.com/73923156/114961386-7b426380-9e9b-11eb-9994-2531d74e8633.png">
+</p>
 
-We are now ready to train our face mask detector using Keras, TensorFlow, and Deep Learning.
+<p align="center">
+     Figure 14: Age estimation confusion matrix benchmark
+</p>
 
-From there, open up a terminal, and execute the following command:
+* The age groups 0-2, 4-6, 8-13 and 25-32 are predicted with relatively high accuracy. ( see the diagonal elements )
+* The output is heavily biased towards the age group 25-32 ( see the row belonging to the age group 25-32 ). This means that it is very easy for the network to get confused between the ages 15 to 43. So, even if the actual age is between 15-20 or 38-43, there is a high chance that the predicted age will be 25-32. This is also evident from the Results section.
 
-- $ python gad.py --image girl1.jpg
-- Gender: Female
-- Age: 25-32 years
+Apart from this, we observed that the accuracy of the models improved if we use padding around the detected face. This may be due to the fact that the input while training were standard face images and not closely cropped faces that we get after face detection.
 
-- $ python gad.py --image man1.jpg
-- Gender: Male
-- Age: 60-100 years
+We also analysed the use of face alignment before making predictions and found that the predictions improved for some examples but at the same time, it became worse for some. It may be a good idea to use alignment if you are mostly working with non-frontal faces.
 
-- $ python gad.py --image kid1.jpg
-- Gender: Male
-- Age: 4-6 years
-
-<img width="800" alt="opencv_age_detection_confusion_matrix" src="https://user-images.githubusercontent.com/73923156/114961386-7b426380-9e9b-11eb-9994-2531d74e8633.png">
-
-
-**Figure 14:** Age & Gender detector confusion matrix
-
-As you can see, one of the biggest issues with the age prediction model is that it’s heavily biased toward the age group 25-32.
-
-Looking at Figure 14, we can see that our model may predict the 25-32 age group when in fact the actual age belongs to a different age bracket.
+As you can see, one of the biggest issues with the age prediction model is that it’s heavily biased toward the age group 25-32. Looking at Figure 14, we can see that our model may predict the 25-32 age group when in fact the actual age belongs to a different age bracket.
 
 **You can combat this bias by:**
 
@@ -224,7 +219,7 @@ Looking at Figure 14, we can see that our model may predict the 25-32 age group 
 Given these results, we are hopeful that our model will generalize well to images outside our training and testing set.
 
 
-# F.  RESULT AND CONCLUSION
+## F.  RESULT AND CONCLUSION
 
 Detecting Age & Gender with OpenCV in real-time
 
@@ -239,7 +234,7 @@ You can then launch the mask detector in real-time video streams using the follo
 In Figure 15, you can see that our Age & Gender detector is capable of running in real-time (and is correct in its predictions as well.
 
 
-# G.   PROJECT PRESENTATION 
+## G.   PROJECT PRESENTATION 
 
 In this python project, we implemented Convolutional Neural Network (CNN) to detect gender and age from a single picture of a face
 
