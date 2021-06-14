@@ -75,7 +75,10 @@ We’ll get to the command prompt, run our script with the image option and spec
 
 **Example 1**
 
-![interesting-python-project-example](https://user-images.githubusercontent.com/58213194/114747254-388d6800-9d83-11eb-9748-dfaeb2f416d1.png)
+```
+C:\Users\ismatazmy-PC>cd dir
+The system cannot find the path specified.
+```
 
 **Figure 2:** Example python command to execute & evaluate the image from the dataset.
 
