@@ -147,15 +147,22 @@ We’ll get to the command prompt, run our script with the image option and spec
 **Example 1**
 
 ```
-C:\Users\ismatazmy-PC>cd dir
-The system cannot find the path specified.
+D:\DEGREE UTeM\DEG SEM 3\AI\ASSIGNMENT\Gender and Age Detection\src>python gad.py --image data/data1.jpg
+Gender: Male
+Age: 25-32 years
+Gender: Male
+Age: 38-43 years
+Gender: Male
+Age: 38-43 years
 ```
 
 **Figure 2:** Example python command to execute & evaluate the image from the dataset.
 
 **Output:**
 
-![python-project-example-output-1](https://user-images.githubusercontent.com/58213194/114747518-80ac8a80-9d83-11eb-9402-5a7699d5d153.png)
+<p align="center">
+<img src="https://user-images.githubusercontent.com/73923156/121850023-bbe51e80-cd1e-11eb-8bee-34b506d0a791.JPG" width=50% height=50%>
+</p>
 
 **Figure 3:** Program output after evaluating the image provided into the command.
 
@@ -164,15 +171,22 @@ The system cannot find the path specified.
 **Example 2**
 
 ```
-C:\Users\ismatazmy-PC>cd dir
-The system cannot find the path specified.
+D:\DEGREE UTeM\DEG SEM 3\AI\ASSIGNMENT\Gender and Age Detection\src>python gad.py --image data/data2.jpg
+Gender: Male
+Age: 4-6 years
+Gender: Male
+Age: 8-12 years
+Gender: Male
+Age: 4-6 years
 ```
 
 **Figure 4:** Example python command to execute & evaluate the second image from the dataset.
 
 **Output:**
 
-![22](https://user-images.githubusercontent.com/58213194/114747704-b3568300-9d83-11eb-991e-6f5326d95b21.png)
+<p align="center">
+ <img src="https://user-images.githubusercontent.com/73923156/121850123-e1722800-cd1e-11eb-9059-bf6425e02daf.JPG" width=50% height=50%>
+</p>
 
 **Figure 5:** Program output after evaluating the second image provided into the command.
 
@@ -181,15 +195,22 @@ The system cannot find the path specified.
 **Example 3**
 
 ```
-C:\Users\ismatazmy-PC>cd dir
-The system cannot find the path specified.
+D:\DEGREE UTeM\DEG SEM 3\AI\ASSIGNMENT\Gender and Age Detection\src>python gad.py --image data/data3.jfif
+Gender: Female
+Age: 8-12 years
+Gender: Male
+Age: 8-12 years
+Gender: Female
+Age: 4-6 years
 ```
 
 **Figure 6:** Example python command to execute & evaluate the third image from the dataset.
 
 **Output:**
 
-![33](https://user-images.githubusercontent.com/58213194/114747968-fa447880-9d83-11eb-8552-8b296cd14b69.png)
+<p align="center">
+ <img src="https://user-images.githubusercontent.com/73923156/121850370-3f067480-cd1f-11eb-884b-9dbe093e7c8f.JPG" width=50% height=50%>
+</p>
 
 **Figure 7:** Program output after evaluating the third image provided into the command.
 
@@ -198,15 +219,18 @@ The system cannot find the path specified.
 **Example 4**
 
 ```
-C:\Users\ismatazmy-PC>cd dir
-The system cannot find the path specified.
+D:\DEGREE UTeM\DEG SEM 3\AI\ASSIGNMENT\Gender and Age Detection\src>python gad.py --image data/data4.jpg
+Gender: Male
+Age: 25-32 years
 ```
 
 **Figure 8:** Example python command to execute & evaluate the fourth image from the dataset.
 
 **Output:**
 
-![44](https://user-images.githubusercontent.com/58213194/114748224-45f72200-9d84-11eb-8386-69d3a754cf40.png)
+<p align="center">
+ <img src="https://user-images.githubusercontent.com/73923156/121850475-69583200-cd1f-11eb-8ecb-fabf550f581e.JPG" width=50% height=50%>
+</p>
 
 **Figure 9:** Program output after evaluating the fourth image provided into the command.
 
@@ -215,16 +239,18 @@ The system cannot find the path specified.
 **Example 5**
 
 ```
-C:\Users\ismatazmy-PC>cd dir
-The system cannot find the path specified.
+D:\DEGREE UTeM\DEG SEM 3\AI\ASSIGNMENT\Gender and Age Detection\src>python gad.py --image data/data5.jpg
+Gender: Male
+Age: 25-32 years
 ```
 
 **Figure 10:** Example python command to execute & evaluate the fifth image from the dataset.
 
 **Output:**
 
-![55](https://user-images.githubusercontent.com/58213194/114748307-5dcea600-9d84-11eb-98d0-b6a04b6a571b.png)
-
+<p align="center">
+ <img src="https://user-images.githubusercontent.com/73923156/121850689-b63c0880-cd1f-11eb-94d1-73f00918e9b8.JPG" width=50% height=50%>
+</p>
 **Figure 11:** Program output after evaluating the fifth image provided into the command.
 
 ***
@@ -232,15 +258,18 @@ The system cannot find the path specified.
 **Example 6**
 
 ```
-C:\Users\ismatazmy-PC>cd dir
-The system cannot find the path specified.
+D:\DEGREE UTeM\DEG SEM 3\AI\ASSIGNMENT\Gender and Age Detection\src>python gad.py --image data/data7.jpg
+Gender: Male
+Age: 15-20 years
 ```
 
 **Figure 12:** Example python command to execute & evaluate the sixth image from the dataset.
 
 **Output:**
 
-![66](https://user-images.githubusercontent.com/58213194/114748392-76d75700-9d84-11eb-8f67-d76539b2933e.png)
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/58213194/121853705-d5d53000-cd23-11eb-81e0-b3b73e8edc2d.jpeg" width=50% height=50%>
+</p>
 
 **Figure 13:** Program output after evaluating the sixth image provided into the command.
 
