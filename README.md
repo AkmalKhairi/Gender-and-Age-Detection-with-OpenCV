@@ -97,10 +97,6 @@ The following directory is our structure of our project:
 
 The dataset/ directory contains the data described in the “Gender and Age Detection” section. Eleven image examples/ are provided so that you can test the static image gender and age detector.
 
-* In the next two sections, we will train our Age & Gender detector.
-
-## E.   TRAINING THE AGE & GENDER DETECTION
-
 * opencv_face_detector.pbtxt
 * opencv_face_detector_uint8.pb
 * age_deploy.prototxt
@@ -139,6 +135,10 @@ Then, we put up rectangles on the image for each such list of coordinates and re
 10. Then, we do the same thing for age.
 
 11. We’ll add the gender and age texts to the resulting image and display it with imshow().
+
+* In the next two sections, we will train our Age & Gender detector.
+
+## E.   TRAINING THE AGE & GENDER DETECTION
 
 Let’s try this gender and age classifier out on some of our own images now.
 
