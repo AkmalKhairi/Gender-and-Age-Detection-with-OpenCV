@@ -69,6 +69,38 @@ Other packages you’ll be needing are math and argparse, but those come as part
 - Detect human's age in images
 - Detect human's gender & age in real-time video streams
 
+## D.   PROJECT STRUCTURE
+
+The following directory is our structure of our project:
+- $ tree --dirsfirst --filelimit 14
+- .
+- ├── age_deploy.protxt
+- ├── age_net.caffeemodel
+- ├── gad.py
+- ├── age_deploy.protxt
+- ├── age_net.caffeemodel
+- ├── opencv_face_detector.pbtxt
+- ├── opencv_face_detector.uint8.pb
+- ├── Dataset
+- │ └── anwar-1.jpg
+- │ └── iman naim-1.jpg
+- │ └── kj-1.jpg
+- │ └── mahathir-1.jpg
+- │ └── saddiq-1.jpg
+- │ └── taju-1.jpg
+- │ └── girl1.jpg
+- │ └── kid1.jpg
+- │ └── man1.jpg
+- │ └── woman1.jpg
+- │ └── woman2.jpg
+- 14 files
+
+The dataset/ directory contains the data described in the “Gender and Age Detection” section. Eleven image examples/ are provided so that you can test the static image gender and age detector.
+
+* In the next two sections, we will train our Age & Gender detector.
+
+## E.   TRAINING THE AGE & GENDER DETECTION
+
 Let’s try this gender and age classifier out on some of our own images now.
 
 We’ll get to the command prompt, run our script with the image option and specify an image to classify:
@@ -158,37 +190,6 @@ The system cannot find the path specified.
 
 **Figure 13:** Program output after evaluating the sixth image provided into the command.
 
-## D.   PROJECT STRUCTURE
-
-The following directory is our structure of our project:
-- $ tree --dirsfirst --filelimit 14
-- .
-- ├── age_deploy.protxt
-- ├── age_net.caffeemodel
-- ├── gad.py
-- ├── age_deploy.protxt
-- ├── age_net.caffeemodel
-- ├── opencv_face_detector.pbtxt
-- ├── opencv_face_detector.uint8.pb
-- ├── Dataset
-- │ └── anwar-1.jpg
-- │ └── iman naim-1.jpg
-- │ └── kj-1.jpg
-- │ └── mahathir-1.jpg
-- │ └── saddiq-1.jpg
-- │ └── taju-1.jpg
-- │ └── girl1.jpg
-- │ └── kid1.jpg
-- │ └── man1.jpg
-- │ └── woman1.jpg
-- │ └── woman2.jpg
-- 14 files
-
-The dataset/ directory contains the data described in the “Gender and Age Detection” section. Eleven image examples/ are provided so that you can test the static image gender and age detector.
-
-* In the next two sections, we will train our Age & Gender detector.
-
-## E.   TRAINING THE AGE & GENDER DETECTION
 <p align="center">
      <img width="800" alt="opencv_age_detection_confusion_matrix" src="https://user-images.githubusercontent.com/73923156/114961386-7b426380-9e9b-11eb-9994-2531d74e8633.png">
 </p>
