@@ -74,25 +74,30 @@ Other packages you’ll be needing are math and argparse, but those come as part
 The following directory is our structure of our project:
 - $ tree --dirsfirst --filelimit 14
 - .
-- ├── age_deploy.protxt
-- ├── age_net.caffeemodel
-- ├── gad.py
-- ├── age_deploy.protxt
-- ├── age_net.caffeemodel
-- ├── opencv_face_detector.pbtxt
-- ├── opencv_face_detector.uint8.pb
+- ├── src
+- │ └── age_deploy.protxt
+- │ └── age_net.caffeemodel
+- │ └── gad.py
+- │ └── gender_deploy.protxt
+- │ └── age_net.caffeemodel
+- │ └── opencv_face_detector.pbtxt
+- │ └── opencv_face_detector_uint8.pb
 - ├── Dataset
-- │ └── anwar-1.jpg
-- │ └── iman naim-1.jpg
-- │ └── kj-1.jpg
-- │ └── mahathir-1.jpg
-- │ └── saddiq-1.jpg
-- │ └── taju-1.jpg
-- │ └── girl1.jpg
-- │ └── kid1.jpg
-- │ └── man1.jpg
-- │ └── woman1.jpg
-- │ └── woman2.jpg
+- │ └── data1.jpg
+- │ └── data2.jpg
+- │ └── data3.jfif
+- │ └── data4.jpg
+- │ └── data5.jpg
+- │ └── data6.jpg
+- │ └── data7.jpg
+- ├── result
+- │ └── 1.jpg
+- │ └── 2.jpg
+- │ └── 3.jpg
+- │ └── 4.jpg
+- │ └── 5.jpg
+- │ └── 6.jpg
+- │ └── 7.jpg
 - 14 files
 
 The dataset/ directory contains the data described in the “Gender and Age Detection” section. Eleven image examples/ are provided so that you can test the static image gender and age detector.
@@ -312,13 +317,15 @@ Detecting Age & Gender with OpenCV in real-time
 You can then launch the mask detector in real-time video streams using the following command:
 - $ python gad.py
 
-![Capture](https://user-images.githubusercontent.com/73923156/114885569-5ae1bd00-9e39-11eb-9b26-8338096ac69c.JPG)
-
+<p align="center">
+     <img width="800" alt="opencv_age_detection_confusion_matrix" src="https://user-images.githubusercontent.com/73923156/114885569-5ae1bd00-9e39-11eb-9b26-8338096ac69c.JPG">
+</p>
 
 **Figure 15:** Age & Gender Detection in real-time video streams
 
 In Figure 15, you can see that our Age & Gender detector is capable of running in real-time (and is correct in its predictions as well.
 
+Overall, we think the accuracy of the models is decent but can be improved further by using more data, data augmentation and better network architectures. Thanks to our AI lecturer, Prof. Goh Ong Sing for giving us the opportunity to learn how to implement a real-world AI project using Python. We gain a lot of knowledge throughout this journey, AI is really interesting and crucial in our life.
 
 ## G.   PROJECT PRESENTATION 
 
@@ -336,8 +343,4 @@ OpenCV is short for Open Source Computer Vision. Intuitively by the name, it is 
 
 A Convolutional Neural Network is a deep neural network (DNN) widely used for the purposes of image recognition and processing and NLP. Also known as a ConvNet, a CNN has input and output layers, and multiple hidden layers, many of which are convolutional. In a way, CNNs are regularized multilayer perceptrons.
 
-[![image](https://user-images.githubusercontent.com/73923156/114887390-00496080-9e3b-11eb-8c25-02ee7df3f450.png)](https://www.youtube.com/watch?v=ReeccRD21EU "demo")
-
-## H. CONCLUSION
-
-Overall, we think the accuracy of the models is decent but can be improved further by using more data, data augmentation and better network architectures. Thanks to our AI lecturer, Prof. Goh Ong Sing for giving us the opportunity to learn how to implement a real-world AI project using Python. We gain a lot of knowledge throughout this journey, AI is really interesting and crucial in our life.
+[youtube video link here]
