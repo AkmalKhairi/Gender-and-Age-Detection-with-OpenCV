@@ -42,7 +42,7 @@ To go about the python project, we’ll:
 - Put the results on the image and display it
 
 <p align="center">
-  <img width="400" src="https://user-images.githubusercontent.com/58213194/114746369-3f67ab00-9d82-11eb-8f39-0730d750ef30.png" alt="Material Bread logo">
+ <img src="https://user-images.githubusercontent.com/73923156/121848986-63f9e800-cd1d-11eb-8867-ef3b0c3a61d7.JPG" width=40% height=40%>
 </p>
 
 <p align="center">
