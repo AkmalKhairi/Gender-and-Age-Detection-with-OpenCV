@@ -256,6 +256,7 @@ Age: 25-32 years
 <p align="center">
  <img src="https://user-images.githubusercontent.com/73923156/121850689-b63c0880-cd1f-11eb-94d1-73f00918e9b8.JPG" width=50% height=50%>
 </p>
+
 **Figure 11:** Program output after evaluating the fifth image provided into the command.
 
 ***
