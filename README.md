@@ -165,28 +165,25 @@ The following directory is our structure of our project:
 - ├── gad.py
 - ├── age_deploy.protxt
 - ├── age_net.caffeemodel
-- ├── girl1.jpg
-- ├── girl2.jpg
-- ├── kid1.jpg
-- ├── man1.jpg
-- ├── minion.jpg
 - ├── opencv_face_detector.pbtxt
 - ├── opencv_face_detector.uint8.pb
-- ├── woman1.jpg
-- ├── woman2.jpg
+- ├── Dataset
+- │ └── anwar-1.jpg
+- │ └── iman naim-1.jpg
+- │ └── kj-1.jpg
+- │ └── mahathir-1.jpg
+- │ └── saddiq-1.jpg
+- │ └── taju-1.jpg
+- │ └── girl1.jpg
+- │ └── kid1.jpg
+- │ └── man1.jpg
+- │ └── woman1.jpg
+- │ └── woman2.jpg
 - 14 files
 
+The dataset/ directory contains the data described in the “Gender and Age Detection” section. Eleven image examples/ are provided so that you can test the static image gender and age detector.
 
-The dataset/ directory contains the data described in the “Gender and Age Detection” section.
-
-Eight image examples/ are provided so that you can test the static image gender and age detector.
-
-We’ll be reviewing a Python scripts in this tutorial:
-
-- detect_mask_image.py: Performs gender and age detection in static images & using your webcam, this script applies Age & Gender detection to every frame in the stream
-
-In the next two sections, we will train our Age & Gender detector.
-
+* In the next two sections, we will train our Age & Gender detector.
 
 ## E.   TRAINING THE AGE & GENDER DETECTION
 <p align="center">
