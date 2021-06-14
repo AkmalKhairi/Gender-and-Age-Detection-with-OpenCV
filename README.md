@@ -193,6 +193,8 @@ The system cannot find the path specified.
 
 **Figure 7:** Program output after evaluating the third image provided into the command.
 
+***
+
 **Example 4**
 
 ```
@@ -207,6 +209,8 @@ The system cannot find the path specified.
 ![44](https://user-images.githubusercontent.com/58213194/114748224-45f72200-9d84-11eb-8386-69d3a754cf40.png)
 
 **Figure 9:** Program output after evaluating the fourth image provided into the command.
+
+***
 
 **Example 5**
 
@@ -239,6 +243,8 @@ The system cannot find the path specified.
 ![66](https://user-images.githubusercontent.com/58213194/114748392-76d75700-9d84-11eb-8f67-d76539b2933e.png)
 
 **Figure 13:** Program output after evaluating the sixth image provided into the command.
+
+***
 
 <p align="center">
      <img width="800" alt="opencv_age_detection_confusion_matrix" src="https://user-images.githubusercontent.com/73923156/114961386-7b426380-9e9b-11eb-9994-2531d74e8633.png">
