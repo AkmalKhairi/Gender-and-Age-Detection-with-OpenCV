@@ -313,7 +313,7 @@ Given these results, we are hopeful that our model will generalize well to image
 
 Detecting Age & Gender with OpenCV in real-time
 
-You can then launch the mask detector in real-time video streams using the following command:
+You can then launch the gender and age detector in real-time video streams using the following command:
 - $ python gad.py
 
 <p align="center">
