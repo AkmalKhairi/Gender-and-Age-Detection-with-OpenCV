@@ -72,8 +72,6 @@ Other packages you’ll be needing are math and argparse, but those come as part
 ## D.   PROJECT STRUCTURE
 
 The following directory is our structure of our project:
-- $ tree --dirsfirst --filelimit 14
-- .
 - ├── src
 - │ └── age_deploy.protxt
 - │ └── age_net.caffeemodel
@@ -100,7 +98,7 @@ The following directory is our structure of our project:
 - │ └── 7.jpg
 - 14 files
 
-The dataset/ directory contains the data described in the “Gender and Age Detection” section. Eleven image examples/ are provided so that you can test the static image gender and age detector.
+The dataset/ directory contains the data described in the “Gender and Age Detection” section. Seven image examples/ are provided so that you can test the static image gender and age detector.
 
 * opencv_face_detector.pbtxt
 * opencv_face_detector_uint8.pb
